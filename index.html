@@ -1,0 +1,275 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saraf Nihal Chandra - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display.swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Tailwind dark mode configuration
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-black via-gray-900 to-black text-white min-h-screen transition-colors duration-500">
+
+    <header id="header" class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" id="home-link" class="text-2xl font-bold text-slate-900 dark:text-white">Saraf Nihal Chandra</a>
+                </div>
+                <div class="hidden md:flex items-center gap-4">
+                    <nav id="main-nav" class="flex items-baseline space-x-4">
+                        <a href="#about" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">About</a>
+                        <a href="#skills" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Skills</a>
+                        <a href="#projects" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Projects</a>
+                        <a href="#contact" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Contact</a>
+                    </nav>
+                    <button id="theme-toggle" type="button" class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 focus:outline-none rounded-lg text-sm p-2.5">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button id="mobile-menu-button" type="button" class="bg-slate-100 dark:bg-slate-800 inline-flex items-center justify-center p-2 rounded-md text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-700 focus:outline-none">
+                        <i data-lucide="menu" class="block h-6 w-6"></i>
+                        <i data-lucide="x" class="hidden h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="nav-link text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#skills" class="nav-link text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">Skills</a>
+                <a href="#projects" class="nav-link text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="#contact" class="nav-link text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <div id="main-content">
+        <main class="container mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+            <section id="about" class="min-h-screen flex items-center">
+                <div class="w-full">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                        <div class="md:w-2/3 text-center md:text-left scroll-animate">
+                            <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold text-slate-900 dark:text-white leading-tight">Hi, I'm Saraf Nihal Chandra</h1>
+                            <h2 class="text-2xl md:text-4xl font-semibold text-teal-500 mt-3 text-glow"><span id="typing-effect"></span></h2>
+                            <p class="mt-6 text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto md:mx-0">
+                                A highly motivated and enthusiastic computer science student seeking to apply and expand my technical skills in a challenging environment. Eager to contribute to innovative projects and learn from experienced professionals.
+                            </p>
+                            <div class="mt-8 flex justify-center md:justify-start gap-4">
+                                <a href="#contact" class="bg-teal-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-teal-500/20">Get In Touch</a>
+                                <a href="/resume.pdf" download class="bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-semibold py-3 px-8 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300 transform hover:scale-105 shadow-lg">Download CV</a>
+                            </div>
+                        </div>
+                        <div class="md:w-1/3 scroll-animate" style="transition-delay: 200ms;">
+                            <div class="relative w-72 h-72 md:w-96 md:h-96 mx-auto">
+                               <div class="absolute inset-0 bg-teal-400 rounded-full blur-3xl opacity-40 animate-pulse"></div>
+                               <img src="https://placehold.co/400x400/FFFFFF/111827?text=SNC" alt="Saraf Nihal Chandra Portrait" class="relative w-full h-full object-cover rounded-full border-8 border-white dark:border-slate-800 shadow-2xl">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="py-24">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-slate-900 dark:text-white mb-16 scroll-animate">
+                  My Technical Arsenal
+                </h2>
+              
+                <div class="max-w-6xl mx-auto space-y-16">
+                  <!-- Programming Languages -->
+                  <div class="scroll-animate">
+                    <h3 class="text-2xl font-semibold text-center text-slate-800 dark:text-slate-200 mb-8">
+                      Programming Languages
+                    </h3>
+              
+                    <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+              
+                      <!-- C++ -->
+                      <a href="https://isocpp.org/" target="_blank" class="flex flex-col items-center gap-3 text-center transition-transform duration-300 hover:scale-110">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" class="w-16 h-16">
+                        <p class="font-semibold text-slate-700 dark:text-slate-300">C++</p>
+                      </a>
+              
+                      <!-- Java -->
+                      <a href="https://www.java.com/" target="_blank" class="flex flex-col items-center gap-3 text-center transition-transform duration-300 hover:scale-110">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="w-16 h-16">
+                        <p class="font-semibold text-slate-700 dark:text-slate-300">Java</p>
+                      </a>
+              
+                      <!-- Python -->
+                      <a href="https://www.python.org/" target="_blank" class="flex flex-col items-center gap-3 text-center transition-transform duration-300 hover:scale-110">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-16 h-16">
+                        <p class="font-semibold text-slate-700 dark:text-slate-300">Python</p>
+                      </a>
+              
+                    </div>
+                  </div>
+                </div>
+              </section>              
+                     <div class="scroll-animate" style="transition-delay: 200ms;">
+                         <h3 class="text-2xl font-semibold text-center text-slate-800 dark:text-slate-200 mb-8">Web Technologies</h3>
+                          <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+                             <div class="flex flex-col items-center gap-3 text-center transition-transform duration-300 hover:scale-110">
+                                 <svg class="w-16 h-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3z" fill="#E44D26"/><path d="M4 4h16v16H4z" fill="#F16529"/><path d="m12 7 5 5-5 5v-3l-2 1-1-1v-4l1-1 2 1zm-2 5.5.5.5-1 1 .5.5 2-1 1.5 1V14l3-3-3-3v2l-3 1.5z" fill="#fff"/></svg>
+                                 <p class="font-semibold text-slate-700 dark:text-slate-300">HTML</p>
+                             </div>
+                              <div class="flex flex-col items-center gap-3 text-center transition-transform duration-300 hover:scale-110">
+                                 <svg class="w-16 h-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h18v18H3z" fill="#1572B6"/><path d="M4 4h16v16H4z" fill="#33A9DC"/><path d="M8.5 7h7l-1 4h-2.5l-.5 2h4l-2 5-3.5-2-.5 1h-1.5l.5-1-2-1h4l.5-2h-7z" fill="#fff"/></svg>
+                                 <p class="font-semibold text-slate-700 dark:text-slate-300">CSS</p>
+                             </div>
+                             <div class="flex flex-col items-center gap-3 text-center transition-transform duration-300 hover:scale-110">
+                                <svg class="w-16 h-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M0 0h32v32H0z" fill="#F0DB4F"/><path d="M21.53,19.82a2.68,2.68,0,0,1-1.4.39,2.2,2.2,0,0,1-2.22-2.31,2.25,2.25,0,0,1,2.28-2.3,2,2,0,0,1,1.83.78l1.45-1a3.59,3.59,0,0,0-3.3-1.89,3.75,3.75,0,0,0-4,3.87,3.64,3.64,0,0,0,3.89,3.87,3.53,3.53,0,0,0,3.18-1.74ZM13.87,19.82a2.7,2.7,0,0,1-1.41.39,2.2,2.2,0,0,1-2.22-2.31,2.25,2.25,0,0,1,2.28-2.3,2.06,2.06,0,0,1,1.88.81l1.43-1a3.59,3.59,0,0,0-3.31-1.89,3.75,3.75,0,0,0-4,3.87,3.64,3.64,0,0,0,3.89,3.87,3.54,3.54,0,0,0,3.23-1.77Z"/></svg>
+                                 <p class="font-semibold text-slate-700 dark:text-slate-300">JavaScript</p>
+                             </div>
+                              <div class="flex flex-col items-center gap-3 text-center transition-transform duration-300 hover:scale-110">
+                                 <svg class="w-16 h-16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" fill="#61DAFB"/><ellipse cx="12" cy="12" rx="10.5" ry="4.5" stroke="#000" stroke-width="1.5"/><ellipse cx="12" cy="12" rx="10.5" ry="4.5" transform="rotate(60 12 12)" stroke="#000" stroke-width="1.5"/><ellipse cx="12" cy="12" rx="10.5" ry="4.5" transform="rotate(120 12 12)" stroke="#000" stroke-width="1.5"/><circle cx="12" cy="12" r="2" fill="#000"/></svg>
+                                  <p class="font-semibold text-slate-700 dark:text-slate-300">React</p>
+                             </div>
+                              <div class="flex flex-col items-center gap-3 text-center transition-transform duration-300 hover:scale-110">
+                                 <svg class="w-16 h-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.18,2.59a2,2,0,0,0-1.88,0L3,7.21a2,2,0,0,0-1,1.73V15.06a2,2,0,0,0,1,1.73l7.3,4.62a2,2,0,0,0,1.88,0l7.3-4.62a2,2,0,0,0,1-1.73V8.94a2,2,0,0,0-1-1.73ZM12,6a2.15,2.15,0,0,1,1.71,3.22,2.09,2.09,0,0,1-1.28.61,1.2,1.2,0,0,1-.52-.1l-2.45-1.5A2.16,2.16,0,0,1,12,6Zm-1.71,9.22a2.09,2.09,0,0,1,1.28-.61,1.2,1.2,0,0,1,.52.1l2.45,1.5a2.15,2.15,0,0,1-2.9,3.71A2.16,2.16,0,0,1,10.29,15.22Z" fill="#8CC84B"/><path d="M22,8.94V15.06a2,2,0,0,1-1,1.73l-7.3,4.62a2,2,0,0,1-1.88,0L4.52,16.79A2,2,0,0,1,3.52,15V8.94a2,2,0,0,1,1-1.73L11.82,2.59a2,2,0,0,1,1.88,0L21,7.21a2,2,0,0,1,1,1.73Z" fill="#333" opacity=".15"/></svg>
+                                  <p class="font-semibold text-slate-700 dark:text-slate-300">Node.js</p>
+                             </div>
+                         </div>
+                     </div>
+                     
+                     <div class="scroll-animate" style="transition-delay: 400ms;">
+                         <h3 class="text-2xl font-semibold text-center text-slate-800 dark:text-slate-200 mb-8">Database & Tools</h3>
+                          <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+                             <div class="flex flex-col items-center gap-3 text-center transition-transform duration-300 hover:scale-110">
+                                 <svg class="w-16 h-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.5 12.23c-2.22-.6-3.13-1.28-3.13-2.43 0-1.05.8-1.88 2.2-1.88 1.48 0 2.13.78 2.2 1.83h2.13c-.08-2.1-1.7-3.6-4.33-3.6-2.6 0-4.45 1.5-4.45 3.75 0 2.65 2.1 3.5 4.5 4.08 2.38.58 3 1.3 3 2.45 0 1.05-.8 1.95-2.33 1.95-1.63 0-2.4-.85-2.5-1.9H9.1c.15 2.2 1.8 3.68 4.55 3.68 2.75 0 4.7-1.45 4.7-3.85 0-2.08-1.4-3.23-4.4-3.95z" fill="#00758F"/><path d="M12.5 12.23c-2.22-.6-3.13-1.28-3.13-2.43 0-1.05.8-1.88 2.2-1.88 1.48 0 2.13.78 2.2 1.83h2.13c-.08-2.1-1.7-3.6-4.33-3.6-2.6 0-4.45 1.5-4.45 3.75 0 2.65 2.1 3.5 4.5 4.08 2.38.58 3 1.3 3 2.45 0 1.05-.8 1.95-2.33 1.95-1.63 0-2.4-.85-2.5-1.9H9.1c.15 2.2 1.8 3.68 4.55 3.68 2.75 0 4.7-1.45 4.7-3.85 0-2.08-1.4-3.23-4.4-3.95z" fill="#E48E00"/></svg>
+                                 <p class="font-semibold text-slate-700 dark:text-slate-300">MySQL</p>
+                             </div>
+                             <div class="flex flex-col items-center gap-3 text-center transition-transform duration-300 hover:scale-110">
+                                 <svg class="w-16 h-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.99 12.02c0-6.6-5.4-12-12-12s-12 5.4-12 12c0 5.6 3.8 10.4 9 11.6v-8.2H8.3v-3.4h2.7V9.4c0-2.7 1.6-4.2 4.1-4.2 1.2 0 2.5.2 2.5.2v2.9h-1.5c-1.3 0-1.7.8-1.7 1.7v2h3.2l-.5 3.4h-2.7v8.2c5.1-1.2 9-6 9-11.6" fill="#F05033"/><path d="m16.2 15.4-.5 3.4h-2.7v8.2c.4 0 .8.1 1.2.1 5.1-1.2 9-6 9-11.6 0-.3 0-.5 0-.8h-7z" fill="#D83416"/></svg>
+                                  <p class="font-semibold text-slate-700 dark:text-slate-300">Git</p>
+                             </div>
+                              <div class="flex flex-col items-center gap-3 text-center transition-transform duration-300 hover:scale-110">
+                                 <svg class="w-16 h-16 fill-slate-900 dark:fill-white" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></svg>
+                                  <p class="font-semibold text-slate-700 dark:text-slate-300">GitHub</p>
+                             </div>
+                              <div class="flex flex-col items-center gap-3 text-center transition-transform duration-300 hover:scale-110">
+                                 <svg class="w-16 h-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.4 3.6a1.5 1.5 0 0 0-1.5.4L3.8 17.5a1.5 1.5 0 0 0 1 2.5l5.1.9 2.5 5.1a1.5 1.5 0 0 0 2.5 1l13.5-15.1a1.5 1.5 0 0 0 .4-1.5L22.1 4a1.5 1.5 0 0 0-1.7-.4z" fill="#007ACC"/><path d="m12.4 22.4 2.5-5.1-4-4 5.1-2.5-9.3-5.2-5 9.3 5.2 4z" fill="#0064A3"/></svg>
+                                  <p class="font-semibold text-slate-700 dark:text-slate-300">VS Code</p>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+            </section>
+
+            <section id="projects" class="py-16">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                  <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-8">Projects</h2>
+              
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- IPL Project Card -->
+                    <a href="projects/ipl-prediction.html" class="block bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                      <img src="https://placehold.co/600x300/14b8a6/ffffff?text=IPL+Prediction" alt="IPL Project" class="w-full h-48 object-cover">
+                      <div class="p-6">
+                        <h3 class="text-xl font-semibold text-slate-900 dark:text-white">IPL Match Prediction</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mt-2">MERN + ML project to predict IPL outcomes with 83% accuracy</p>
+                      </div>
+                    </a>
+              
+                    <!-- Legal Summarizer Project Card -->
+                    <a href="projects/legal-summarization.html" class="block bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                      <img src="https://placehold.co/600x300/f97316/ffffff?text=Legal+Summarizer" alt="Legal Summarizer" class="w-full h-48 object-cover">
+                      <div class="p-6">
+                        <h3 class="text-xl font-semibold text-slate-900 dark:text-white">Legal Document Summarizer</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mt-2">Deep Learning app for summarizing legal documents</p>
+                      </div>
+                    </a>
+              
+                    <!-- Chatbot Project Card -->
+                    <a href="projects/smartdocq.html" class="block bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                      <img src="https://placehold.co/600x300/3b82f6/ffffff?text=SmartDocQ" alt="SmartDocQ" class="w-full h-48 object-cover">
+                      <div class="p-6">
+                        <h3 class="text-xl font-semibold text-slate-900 dark:text-white">SmartDocQ</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mt-2">AI-powered chatbot for legal queries</p>
+                      </div>
+                    </a>
+              
+                  </div>
+                </div>
+              </section>
+
+              <section id="contact" class="py-24">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-slate-900 dark:text-white mb-4 scroll-animate">Let's Connect</h2>
+                <p class="text-center text-slate-500 dark:text-slate-400 mb-12 max-w-2xl mx-auto scroll-animate" style="transition-delay: 150ms;">
+                    I'm currently open to new opportunities and collaborations. Feel free to reach out if you have a project in mind or just want to say hi!
+                </p>
+                <div class="max-w-xl mx-auto bg-white dark:bg-slate-800 p-8 rounded-lg shadow-md scroll-animate" style="transition-delay: 300ms;">
+                    <form id="contact-form" novalidate>
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-input w-full p-3 bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-lg text-slate-900 dark:text-slate-200 focus:ring-2 focus:ring-teal-500 focus:border-teal-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Your Email</label>
+                            <input type="email" id="email" name="email" class="form-input w-full p-3 bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-lg text-slate-900 dark:text-slate-200 focus:ring-2 focus:ring-teal-500 focus:border-teal-500" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" class="form-input w-full p-3 bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-lg text-slate-900 dark:text-slate-200 focus:ring-2 focus:ring-teal-500 focus:border-teal-500" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="w-full bg-teal-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-teal-700 transition-all duration-300 transform hover:scale-105">Send Message</button>
+                        </div>
+                        <div id="form-success" class="text-green-500 mt-4 text-center hidden">Your message has been sent successfully!</div>
+                        <div id="form-error" class="text-red-500 mt-4 text-center hidden">Oops! Something went wrong.</div>
+                    </form>
+                </div>
+            </section>
+            
+            <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+            <script>
+                emailjs.init('service_l9d6z2b'); // Replace with your EmailJS user ID
+            
+                const form = document.getElementById('contact-form');
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+            
+                    emailjs.sendForm('service_l9d6z2b', 'template_wb5zy4o', this"o78sKSUG2t6s2QTDa")
+                    .then(() => {
+                        document.getElementById('form-success').classList.remove('hidden');
+                        document.getElementById('form-error').classList.add('hidden');
+                        form.reset();
+                    }, (error) => {
+                        console.error('EmailJS Error:', error);
+                        document.getElementById('form-success').classList.add('hidden');
+                        document.getElementById('form-error').classList.remove('hidden');
+                    });
+                });
+            </script>
+        </main>
+    </div>
+    <footer class="bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-500 dark:text-slate-400">&copy; 2025 Saraf Nihal Chandra. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="https://github.com/NIHAL0718" target="_blank" rel="noopener noreferrer" class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                        <i data-lucide="github" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/nihalchandra0718" target="_blank" rel="noopener noreferrer" class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors">
+                        <i data-lucide="linkedin" class="w-6 h-6"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
